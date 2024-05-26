@@ -32,3 +32,118 @@ echo "${transport[1]}"
 unset transport[1]
 transport[1]='trainride'
 car trainride bike bus
+
+
+#############################################################################################################    EXTRA    ##################################################################################################################
+
+
+BASH SCRIPTING
+
+start with - #!/bin/bash
+
+print - echo "HELLO"
+
+make it executable - chmod +x <scriptname>.sh
+
+run the command - bash <scriptname>.sh
+
+take input - 
+echo "Your Name"
+read name
+echo "Your name is $name"
+
+Shell MEnu - 
+echo "Choose color"
+select color in red green blue white
+do
+    break
+done
+echo "You choose $color"
+
+For Loop - 
+for name in bob tom harry; 
+do
+    echo "Hello $name"
+done
+
+Loop every file to print in directory using loop - 
+for fn in *; 
+do
+    echo "$fn"
+done
+
+loop to print numbers - 
+for i in {1..10}
+do 
+    echo"$i"
+done
+
+IF-ELSE - 
+echo "Guess number in 1 to 10"
+read guess
+if [ $echo = 6 ];
+then
+    echo "Correct"
+elif [ $guess !=6];
+then
+    echo "False"
+fi
+
+LIST - 
+color=( red blue green yellow )
+for color in ${color[*]};
+do
+    echo "$color"
+done
+echo ${color[0]} ---- select specific in list
+
+Strings - 
+string="Hello World"
+echo "$string"
+
+String Slicing - 
+string="Hello World"
+string2=${string:<start>:<end>}
+echo "$string"
+
+Functions- 
+function hello {
+    echo "HEllo"
+}
+hello
+
+TAking parameters in functions - 
+function hello {
+    echo "HEllo $1, $2"
+}
+hello "NJ" "RJ"
+
+Read File - 
+file="test.txt"
+while reaad line;
+do
+    echo $line
+donr < $file
+
+append text in file - 
+file='myfile.txt'
+echo "This is my file" >>$file
+cat $file
+
+save command line output in file - 
+file="output.txt"
+fileorcommand > $file
+
+list file with specific ending - 
+ls -al *.<property>
+ex - ls -al *.sh
+
+search with grep - 
+out=$(ls -al *.sh | grep <fileame>)
+echo "$(out)"
+
+To record, you can use the 'rec' command defined below:
+alias rec='notify-send "Recording 1 minute"; cnee --record -o events.xnr --str 60 --keyboard --mouse; notify-send "Finished recording"'
+To replay, use the 'replay' command below:
+alias replay='notify-send "Replay recording"; cnee --replay -f events.xnr; notify-send "Finished replay"'
+Save the settings in .bashrc or .zshrc, because otherwise they would be gone the next time you start a terminal
