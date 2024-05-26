@@ -1,0 +1,34 @@
+#make it executable
+bash -x ./<filename>.sh
+#important 1st line
+!/bin/bash
+#gives output
+echo "Hello World"
+#can use linux commands directly
+whoami
+ls
+#variables
+name="NJ"
+age=21
+echo $name
+echo "$name is $age year old"
+#Take input
+echo what is your name
+read name
+echo "my name is $name"
+#How can we get the number of arguments supplied to a script?
+$#
+#How can we get the filename of our current script(aka our first argument)?
+$0
+#How can we get the 4th argument supplied to the script?
+$4
+#Array
+transport=('car' 'train' 'bike' 'bus')
+#Print all in array
+echo "${transport[@]}"
+#Print specific in array
+echo "${transport[1]}"
+#change in array
+unset transport[1]
+transport[1]='trainride'
+car trainride bike bus
