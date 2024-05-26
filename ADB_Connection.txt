@@ -1,0 +1,18 @@
+1) connect using usb debugging while cable on
+2) check android is connected
+3) adb tcpip 5555
+4) must be connected with same network
+5) search for ip address in wifi option
+6) adb connect <ipaddress>
+7) once connected unplug and enjoy
+
+COMMANDS -
+adb shell - opens shell
+adb push <filefrompc> <locationfromadb> - send file to specific location from pc to mobile
+adb pull <fileonphone> <locationonpc> - receive any file on pc from adb
+adb exec-out screencap -p > <locationforsave>/<scname>.png - screenshot
+adb shell screenrecord "<location>/<vidname>.mp4" - screenrecord
+ctrl+c - exit screenrecord
+adb -s <deviceconfig> <command> - access  to specific device when more are connected
+adb install <locationofapk><apkname>.apk - install any apk from anywhere
+adb shell pm list packages -f - finds all packages inside android
