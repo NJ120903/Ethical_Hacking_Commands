@@ -1,0 +1,57 @@
+Create a file - echo > <filename>.txt
+
+write in file - echo <texttowrite> >> <filename>
+
+display text in file - touch <filename>
+
+make the folder - mkdir <foldername>
+
+show current files in directory - dir
+
+rename file - rename <oldname> <newname>
+
+copy content of f1 to f2 - xcopy filename f2\filename
+
+copy content of f1 to file in f2 - xcopy f1 f2
+
+move content of f1 to f2 - move f1 f2
+
+delete directory - rmdir <foldername>
+
+delete folder with files in it - rmdir /s /q <foldername>
+
+Deletes file - del <filename>
+
+show ip - nslookup <websitename>
+
+Show Active connection - Netstat
+
+show mac address of system - arp -a
+
+Hide sensitive folders - attrib +h +s <foldername>
+
+UnHide sensitive folders - attrib -h -s <foldername>
+
+shutdown with delay - shutdown /s /f /t 30
+
+password connected to device - 
+1 netsh wlan show profiles
+2 netsh wlan show profile <profilename> key=clear
+
+display mac addresses - getmac
+
+disable firewall - netsh advfirewall set all state off
+
+enable firewall - netsh advfirewall set all state on
+
+clear screen - cls
+
+display running process - tasklist
+
+kill any task - taskkill /pid <pid>
+
+display installed device drivers - driverquery
+
+show all users - net user
+
+add the user net user <username> <password> /add
