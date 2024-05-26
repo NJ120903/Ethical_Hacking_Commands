@@ -1,0 +1,1 @@
+ping -l 65540 <hostname or computer address>
