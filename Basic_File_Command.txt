@@ -1,0 +1,11 @@
+Finding any file
+find -name <filename> -type <filetype>
+
+You wish to encrypt a file called history_logs.txt using the AES-128 scheme. What is the full command to do this?
+gpg –cipher-algo AES-128 –symmetric history_logs.txt
+
+What is the command to decrypt the file you just encrypted?
+gpg history_logs.txt.gpg
+
+Mysql databases can be hosted for remote access. To access remote databases use the following command:
+mysql -u [username] -p -h [host ip]
