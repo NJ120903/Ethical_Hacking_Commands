@@ -1,0 +1,11 @@
+USE THE SAME FOLDER WHICH YOU WANT TO DISPLAY ON YOUR TOR NETWORK
+
+Start the server
+python3 -m http.server --bind 127.0.0.1 8080
+
+Start tor service 
+sudo tor 
+
+TorWebPageLink
+cd /var/lib/tor/hidden_service/hostname
+http://p22dlexuy2bylbegu57iancbqbpsfqvjyeq2ogzlv7vmjg3slltmlxid.onion/
