@@ -1,0 +1,9 @@
+ENCRYPT AND FIND USER DATA
+
+1] https://github.com/HugoLB0/Ransom0.git
+2] cd Ramsom0
+3] pip install -r requirements.txt
+4] nano server.py 
+5] apply the new ngrok authtoken
+6] python3 ramson0.py
+7] File that is created in the Ramson0 folder is encrypted
