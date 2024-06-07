@@ -1,3 +1,19 @@
+Powershell Mastery
+
 Comments - 
           Single line - #
           Multi Line - <# <text> #>
+
+Variable -
+          $var = 10
+          $var
+          $var.GetType().Name
+           
+          $var = 'It's a string'
+          Local Variable - $var = 100
+          Global variable = $Global:var = 100
+          Print output = Write-Output $var
+          Print output in file = $var | Out-File <location/filename.txt>
+          remove data in variable = Clear-Variable -Name <variablename>
+          Remove variable = Remove-Variable -Name <variablename>
+           
