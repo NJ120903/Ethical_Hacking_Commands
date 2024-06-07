@@ -1,0 +1,8 @@
+CONNECT ANYONE DEVICE USING IP USING GHOST
+
+1] git clone https://github.com/FazalMahmood/ghost.git
+2] cd ghost
+3] chmod +x install.sh
+4] sudo ./install.sh
+5] chmod +x ghost
+6] ./ghost
