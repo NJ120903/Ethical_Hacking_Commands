@@ -16,4 +16,34 @@ Variable -
           Print output in file = $var | Out-File <location/filename.txt>
           remove data in variable = Clear-Variable -Name <variablename>
           Remove variable = Remove-Variable -Name <variablename>
-           
+
+Array - 
+          Create an array - $arr = 1,2,3
+          Output Array - $arr
+          Create Empty Powershell Array - $arr = @()
+          Create DataType Specific Array - [int[]]$arr = 1,2,3
+          Check length of array - $arr.Length
+          Check value exist in array - $arr.Contains(1)
+          Clear the array - $arr = $null
+          Array List - $arr = New-Object System.Collections.ArrayList
+          To operate on array we need to convert it to array list
+          Convert array to array list - [System.COllections.ArrayList]$arrlist = $arr
+          Add data to arraylist - $arrlist.Add("4")
+                                  $arrlist
+          Remove data from arraylist - $arrlist.Add("2")
+                                       $arrlist
+          Check length of arraylist - $arrlist.Count
+          Print array - $arrlist | Write-Output
+          Array Index - $arr = 10,20,30
+                        $arr[2]
+                        Output - 30
+          Multidimensional Array - 
+                                 Create a md array - 
+                                                   $mdarr = @()
+                                 Add Data to MultiDimensional Array - 
+                                                   $mdarr += @('Sunject1','Math','90')
+                                                   $mdarr += @('Sunject2','English','90')
+                                 Print The multidimensional Array - 
+                                                   foreach($arr in $mdarr){
+                                                   Write-Host ($arr)
+                                                   }
