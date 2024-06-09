@@ -47,3 +47,61 @@ Array -
                                                    foreach($arr in $mdarr){
                                                    Write-Host ($arr)
                                                    }
+
+Operator and flow control-
+          Addition -
+                    3+7
+          Substraction -
+                    3-7
+          Multiplication -
+                    7*3
+          Division -
+                    7/3
+          Modulo - 
+                    7%3
+          Concatenate 2 strings - 
+                    $var1 = "Powershell"
+                    $var2 = "Training"
+                    $var3 = $var1 + $var2
+                    Write-Output $var3
+          Concatenate 2 hash table -
+                    $hash1 = @{"one"=1}
+                    $hash2 = @{"two"=2}
+                    $hash3 = $hash1 + $hash2
+                    Write-Output $hash3
+          Array Concatenation - 
+                    $arr1 = @("one",1)
+                    $arr2 = @("two",2)
+                    $arr3 = $arr1 + $arr2
+                    Write-Output $arr3
+          Copy String - 
+                    Write-Output "============================"
+                    Write-Output "Powershell"
+                    Write-Output "============================"
+                              OR ELSE USE LIKE THIS
+                    Write-Output ("=" * 50)
+                    Write-Output "Powershell"
+                    Write-Output ("=" * 50)
+          Comparison Operators - 
+                    -eq = equalto
+                              2 -eq 2
+                    -ne = notequalto
+                              3 -ne 2
+                    -ge = Greater than or equal
+                              4 -ge 4
+                    -gt = Greater than
+                              
+                    -lt = Less than
+                    -le = Less than equal to
+                    -like = Wildcard operator = used to find which words have 1st word available in 2nd word or not
+                              "PowerShell","Computer","Shell" -like "*Shell"
+                              Output = Powershell
+                                       Shell
+                    -notlike = Wildcard operator = used to find which word doesnot have 1st word available in 2nd word or not
+                              "PowerShell","Computer","Shell" -like "*Shell"
+                              Output = Computer
+                    -contains = Wildcard operator = If 1st contain 2nd output true
+                              "PowerShell","Computer","Shell" -contains "*Shell"
+                              Output = True
+
+
