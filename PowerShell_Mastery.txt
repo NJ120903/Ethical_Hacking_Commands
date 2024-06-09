@@ -103,5 +103,28 @@ Operator and flow control-
                     -contains = Wildcard operator = If 1st contain 2nd output true
                               "PowerShell","Computer","Shell" -contains "*Shell"
                               Output = True
-
-
+          Logical Operators - 
+                    AND = -and
+                              (3 -eq 3) -and (5 -gt -4)
+                              Output = true
+                    OR = -or
+                              (3 -eq 3) -or (5 -lt -4)
+                    NOT = -not
+                              -not((3 -eq 3) -and (5 -gt -4))
+                    NOT = !
+          Flow Control - 
+                    If and Else -
+                              if(Get-Process -Name notepad){
+                                        Write-Output("Notepad is running")
+                              }
+                              else{
+                                        Write-Output("Notepad is not running")
+                              }
+                    Switch - 
+                              $temp = 30
+                              switch($temp){
+                              {$_ -lt 32 } {Write-Output("Below Freezing");break}          
+                              {$_ -lt 50 } {Write-Output("Cold");break}  
+                              {$_ -lt 70 } {Write-Output("Warm");break}  
+                              default{"Hot"}
+                              }
