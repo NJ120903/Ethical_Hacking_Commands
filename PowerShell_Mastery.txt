@@ -128,3 +128,22 @@ Operator and flow control-
                               {$_ -lt 70 } {Write-Output("Warm");break}  
                               default{"Hot"}
                               }
+LOOPS - 
+          For Loop -
+                    $arr = 10,20,30,40
+                    for ($i=0;i -lt 5;$i++){
+                              Write-Output("Array $1 value: $arr[i]")
+                    }
+          For-Each Loop - 
+                    $users = "Mukesh" , "John" , "Max"
+                    ForEach($user in $users){
+                              Write-Output("User: "$users")
+                    }
+          While Loop - 
+                    $num = 1
+                    While($num -le 10){
+                              Write-Output $num
+                              $um++
+                    }
+          Do while - 
+                    
