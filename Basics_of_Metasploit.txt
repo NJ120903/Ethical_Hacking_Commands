@@ -1,0 +1,15 @@
+sudo apt install metasploit-framework
+systemctl enable postgresql
+msfdb init
+msfdb status
+msfconsole
+db_status
+##It must display connected to msf connection type postgresql if not do it manually
+db_connect -y /usr/share/metasploit-framework/config/database.yml
+##Managing Workspace
+workspace -a <name> - adds workspace
+workspace -d <name> - delete workspace
+workspace <name> - changes workspace
+workspace -r <oldname> <newname> - rename workspace
+db_nmap <ip> - scan nmap
+search <query> - search anything in msfconsole
