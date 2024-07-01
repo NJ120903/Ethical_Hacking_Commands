@@ -1,0 +1,97 @@
+SETTING UP OWN OPENVPN SERVER AND CLIENT
+
+
+1] Download OpenSSL
+2] Add OpenSSL to Environment Variables
+3] Download OpenVPN with .msi file
+4] Customize the setup
+5] Click OpenVPN Service
+6] Install OpenSSL utilities - EasyRSA 3 Certificate Management Scripts
+7] Run Command Prompt as Administrator
+8] Set up certificate authority and generate Certificate and Keys
+• Type the following commands to enter inside EasyRSA shell:
+C:\Windows\system32>cd C:\Program Files\OpenVPN\easy-rsa
+C:\Program Files\OpenVPN\easy-rsa>EasyRSA-Start.bat
+• Remove existing configuration, just for good measure:
+# ./easyrsa clean-all
+• Initialize pki, and type yes to confirm:
+./easyrsa init-pki
+• Build certificate authority:
+# ./easyrsa build-ca nopass
+[...]
+Common Name (eg: your user, host, or server name) [Easy-RSA CA]:ovpn
+• Build server certificate and key:
+# ./easyrsa build-server-full server nopass
+• Generate Diffie Hellman parameters:
+# ./easyrsa gen-dh
+• Generating client certificates:
+# ./easyrsa build-client-full client01 nopass
+9] Go to C:\Program Files\OpenVPN\config-auto
+10] Add a windows Firewall Rule
+• We need to open 1194 udp port to allow OpenVPN clients connections. Use the Windows Firewall Management Console or this command inside a Administrator command line console to do that
+C:\Windows\system32>netsh advfirewall firewall add rule name="OpenVPN" dir=in localport=1194 remoteport=0-65535 protocol=UDP action=allow remoteip=any localip=any
+11] As administrator, edit C:\Program Files\OpenVPN\config-auto\server.ovpn file
+
+port 1194
+proto udp
+dev tun
+ca ca.crt
+cert server.crt
+key server.key
+dh dh.pem
+server 10.50.8.0 255.255.255.0
+ifconfig-pool-persist ipp.txt
+keepalive 10 120
+comp-lzo
+persist-key
+persist-tun
+status openvpn status log
+verb 3
+12] Restart openvpn service
+• Ctrl+R
+• services.msc
+• Restart OpenVPNService
+
+Now Setting up the client Service
+
+• OpenVPN Client :
+OS: Windows 10
+Role: OpenVPN Client
+• Installing OpenVPN:
+Download the same package, and here install with default parameters.
+• Copy certificates from the Server:
+From the Server get the following files (from C:\Program Files\OpenVPN\easy-rsa\pki, C:\Program Files\OpenVPN\easy-rsa\pki\issued and C:\Program Files\OpenVPN\easy-rsa\pki\private):
+ca.crt
+client01.crt
+client01.key
+And paste them to C:\Program Files\OpenVPN\config.
+
+13] Edit client.ovpn file
+client
+
+dev tun
+
+proto udp
+
+remote OPENVPN_IP 1194
+
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+
+ca ca.crt
+cert client01.crt
+key client01.key
+
+comp-1zo
+
+verb 3
+
+14] Start OpenVPN from Desktop Shortcut as Administrator
+
+15] It will create a shortcut in taskbar
+
+16] Right click itand connect
+
+17] Get Connected
