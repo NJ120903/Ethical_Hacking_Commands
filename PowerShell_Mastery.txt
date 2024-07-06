@@ -145,5 +145,3 @@ LOOPS -
                               Write-Output $num
                               $um++
                     }
-          Do while - 
-                    
