@@ -29,3 +29,7 @@ Obfuscation and Encryption Techniques for Protecting App Code
         Encryption Techniques:
             Encrypting sensitive data stored within the app using strong algorithms (e.g., AES).
             Using secure communication protocols (e.g., HTTPS with SSL/TLS) to protect data in transit.
+
+
+For this prcess the best and latest tool ever available is:
+    https://github.com/d78ui98/APKDeepLens
