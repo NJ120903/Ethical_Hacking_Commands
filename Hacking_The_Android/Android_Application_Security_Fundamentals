@@ -1,0 +1,22 @@
+Authentication and Authorization mechnisms in Android apps
+    1. Authentication and Authorization
+        Authentication is the process of verifying the identity of a user or system, ensuring that they are who they claim to be. This typically involves checking credentials such as usernames and passwords.
+        Authorization, on the other hand, determines what an authenticated user is allowed to do. It involves granting permissions to access resources or perform actions based on the user's identity and role.
+    2. OAuth vs OpenID
+        OAuth is primarily an authorization protocol that allows third-party applications to gain limited access to user accounts on an HTTP service, without exposing user credentials. It uses access tokens to grant permissions for specific actions.
+        OpenID is an authentication protocol that enables users to log in to multiple services using a single set of credentials, providing a seamless single sign-on experience.
+        OpenID Connect (OIDC) builds on OAuth 2.0 by adding an identity layer, allowing clients to verify user identities and obtain basic profile information alongside authorization.
+    3. Why Need to Set Up Authorization and Authentication
+        Setting up robust authentication and authorization mechanisms is crucial for several reasons:
+        Security: Protects sensitive data by ensuring only authorized users can access it.
+        User Trust: Builds user confidence in the application by safeguarding their personal information.
+        Compliance: Helps meet regulatory requirements for data protection and privacy.
+        Access Control: Enables fine-grained control over what users can see and do within an application.
+    4. Implementing Secure Communication with HTTP and SSL/TLS
+        To ensure secure communication over the internet, HTTPS (HTTP Secure) combines HTTP with SSL/TLS (Secure Sockets Layer/Transport Layer Security):
+        SSL/TLS encrypts the data transmitted between the client and server, preventing eavesdropping and tampering.
+        HTTPS ensures that the website being accessed is authentic and protects against man-in-the-middle attacks.
+        To implement secure communication:
+        Obtain an SSL/TLS certificate from a trusted Certificate Authority (CA).
+        Configure your web server to use HTTPS by enabling SSL/TLS protocols.
+        Redirect all HTTP traffic to HTTPS to ensure all communications are secure.
