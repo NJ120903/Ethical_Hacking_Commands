@@ -1,0 +1,86 @@
+What is OS
+        An operating system (OS) is system software that manages computer hardware and software resources, acting as an interface between users and the computer. It performs essential functions such as:
+        Process Management: Controls the execution of programs.
+        Memory Management: Allocates and manages memory usage.
+        File Management: Organizes and manages data storage.
+        Device Management: Communicates with hardware devices.
+        User Interface: Provides a way for users to interact with the system.
+        Security: Protects data and resources from unauthorized access.
+        Examples include Microsoft Windows, macOS, Linux, Android, and iOS.
+
+What is Android OS
+        Android OS is a Linux-based mobile operating system developed by Google, primarily designed for touchscreen devices like smartphones and tablets. Launched in 2008, it is the most widely used mobile OS globally, powering over 2.5 billion devices.
+        Key Features:
+        Open Source: Allows customization and modification by developers.
+        User Interface: Highly customizable with themes and widgets.
+        Multitasking: Supports running multiple applications simultaneously.
+        Application Ecosystem: Primarily uses the Google Play Store for app distribution.
+        Android's flexibility and extensive app support contribute to its popularity in the mobile market.
+
+Android OS Versions
+        1.0 - 1.1	No codename	2008	Initial release with basic Google apps integration like Gmail and Maps.
+        1.5	Cupcake	2009	Introduced an on-screen keyboard and support for third-party app widgets.
+        1.6	Donut	2009	Enhanced camera features and support for different screen sizes.
+        2.0 - 2.1	Eclair	2009	Improved Google Maps and Bluetooth support; introduced multiple account sync.
+        2.2	Froyo	2010	Focused on performance improvements and introduced voice actions.
+        2.3	Gingerbread	2010	Introduced a new UI design, NFC support, and enhanced copy/paste functions.
+        3.0 - 3.2	Honeycomb	2011	Designed for tablets, introduced a new user interface with virtual buttons.
+        4.0	Ice Cream Sandwich	2011	Combined features from Honeycomb and Gingerbread, introduced Face Unlock.
+        4.1 - 4.3	Jelly Bean	2012	Improved notifications and accessibility features; introduced Google Now.
+        4.4	KitKat	2013	Introduced "OK Google" voice command and improved performance on low-end devices.
+        5.0 - 5.1	Lollipop	2014	Introduced Material Design, enhanced notifications, and battery-saving features.
+        6.0	Marshmallow	2015	Introduced Doze mode for battery optimization and granular app permissions.
+        7.0 - 7.1	Nougat	2016	Added split-screen mode, improved notifications, and introduced Google Assistant.
+        8.0 - 8.1	Oreo	2017	Introduced picture-in-picture mode and notification channels for better management
+        9	Pie	2018	Leveraged AI for adaptive battery management and gesture navigation.
+        10	Android 10	2019	First version to drop dessert names; focused on privacy features and dark mode.
+        11	Android 11	2020	Enhanced messaging features, screen recording, and improved privacy controls.
+        12	Android 12	2021	Introduced Material You design language for customization options.
+        13	Android 13	2022	Focused on user personalization and security enhancements for app permissions.
+        14	Android 14	2023	Continued improvements in user experience and security features.
+
+Why need for different version of OS
+        Different versions of an operating system (OS) are necessary for several reasons:
+        Feature Enhancements: New versions introduce improved features and functionalities to keep up with technological advancements.
+        Compatibility: They ensure support for various hardware configurations and software applications, accommodating user needs.
+        Localization: Versions are tailored for different languages and regional requirements, enhancing accessibility for global users.
+        Security Updates: New releases address vulnerabilities and enhance security to protect user data from threats.
+        Performance Improvements: Each version typically includes optimizations for better speed and efficiency on modern hardware.
+        User Experience: Updates focus on refining the user interface based on feedback, making the OS more intuitive and user-friendly.
+
+Android OS Architecture
+        Linux Kernel: Core OS functions.
+        HAL: Interfaces for hardware.
+        Android Runtime (ART): Executes apps.
+        Native Libraries: C/C++ libraries for specific functions.
+        Android Framework: APIs for app development.
+        Applications: User-facing apps.
+
+Common Security Threats Targeting android devices
+        Phishing: Attackers use deceptive emails, messages, or websites to trick users into revealing sensitive information like passwords and credit card details.
+        Smishing: A form of phishing conducted via SMS, where attackers send fraudulent text messages to lure users into providing personal information or downloading malicious apps.
+        Vishing: Voice phishing involves phone calls where attackers impersonate legitimate entities to extract sensitive data from victims.
+        SIM Card Swapping: This technique allows attackers to take control of a victim's phone number by convincing the mobile carrier to transfer the number to a new SIM card, enabling access to sensitive accounts linked to that number.
+        Malicious Code: Malware can be disguised as legitimate applications, leading to unauthorized access, data theft, or device control. Examples include Trojans and spyware that can monitor user activities.
+        Fake Wi-Fi Networks: Attackers set up rogue Wi-Fi hotspots to intercept data transmitted by users connecting to these networks, potentially capturing sensitive information.
+        Adware: This type of software displays unwanted advertisements on devices and may track user behavior without consent, often leading to privacy violations.
+        Rooting Malware: Some malware exploits rooting techniques to gain elevated privileges on devices, allowing attackers to bypass security measures and access sensitive data.
+        OS Vulnerabilities: Android’s open-source nature and fragmentation can lead to unpatched vulnerabilities in older versions, making devices susceptible to attacks.
+
+What is CVE
+        Common Vulnerabilities and Exposures (CVE) is a publicly available catalog that identifies and catalogs known security vulnerabilities in software and hardware. Established by the MITRE Corporation and supported by the U.S. Department of Homeland Security, the CVE system assigns unique identifiers (CVE IDs) to vulnerabilities, facilitating easier communication and tracking among security professionals.
+
+OWASP Top 10 Android
+        The OWASP Top 10 Mobile Risks for 2024 outlines the most critical vulnerabilities that mobile applications, including those on Android, may face. Here’s a summary of the current top 10 vulnerabilities:
+        Improper Credential Usage: This includes issues like hardcoding credentials or storing them in plain text, leading to unauthorized access.
+        Inadequate Supply Chain Security: Vulnerabilities arise from not properly securing third-party components, which can allow attackers to inject malicious code.
+        Insecure Authentication/Authorization: Weak authentication mechanisms can allow unauthorized users to access sensitive data and functionalities.
+        Insufficient Input/Output Validation: Failing to validate user inputs can lead to code injection attacks and data manipulation.
+        Insecure Communication: Lack of encryption or secure protocols can expose sensitive data during transmission.
+        Inadequate Privacy Controls: Insufficient measures to protect user privacy can lead to unauthorized data collection and sharing.
+        Insufficient Binary Protections: Weaknesses in protecting application binaries can expose sensitive information, such as API keys, making them vulnerable to exploitation.
+        Security Misconfiguration: Incorrectly configured security settings can leave applications open to attacks and unauthorized access.
+        Insecure Data Storage: Storing sensitive data insecurely (e.g., in plain text) can lead to data breaches and unauthorized access.
+        Insufficient Cryptography: Weak cryptographic practices, such as using outdated algorithms or poor key management, can compromise data integrity and confidentiality.
+        These vulnerabilities highlight the importance of implementing robust security practices in mobile application development to mitigate risks effectively.
+
